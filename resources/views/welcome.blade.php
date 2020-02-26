@@ -46,7 +46,7 @@
                 <div class="row">
                             <div class="col">
                                 <div class="card mt-5">
-                                    <img class="card-img-top" src="../audi.jpg" alt="Card image cap" >
+                                    <img class="card-img-top" src="{{asset('audi.jpg')}}" alt="Card image cap" >
                                     <div class="card-body">
                                     <h4 class="card-title"><a href="product.html" title="View Product">{{$car->mark}} {{$car->model}}<p class="float-right">{{$car->engine}}</p></a></h4>
                                     <p class="card-text">{{$car->content}}</p>
