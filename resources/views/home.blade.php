@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <a href="{{ route('cars.index') }}" class="btn btn-danger btn-lg">PANEL ADMINA</a>
                     
                 </div>
             </div>
