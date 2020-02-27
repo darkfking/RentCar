@@ -6,7 +6,9 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
         <title>RentCar</title>
         <style>
             body {
@@ -53,7 +55,7 @@
                                         <div class="row">
                                             
                                             <div class="col-9">
-                                                <a href="#" class="btn btn-success btn-block">Zarezerwuj</a>
+                                                <a class="btn btn-success btn-block" data-toggle="collapse" href="#reservation" role="button" aria-expanded="false" aria-controls="reservation">Zarezerwuj</a>
                                             </div>
                                             <div class="col-3">
                                             <p>
@@ -63,7 +65,36 @@
     
                                               </p>
                                             </div>
-                                              
+                                            <div class="collapse" id="reservation">
+                                                <div class="container">
+                                                    
+                                                      <div class="card card-body ">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class='col-sm-6'>
+                                                                    <input id="datepicker" width="270" placeholder="Wybierz date początkową..."/>
+                                   
+                                                                </div>
+                                                                <div class='col-sm-6'>
+                                                                    <input id="datepicker1" width="270" placeholder="Wybierz date końcową..."/>
+                                   
+                                                                </div>
+                                                                
+                                                                
+                                                                <script>
+                                                                    $('#datepicker').datepicker({
+                                                                        uiLibrary: 'bootstrap'
+                                                                    });
+                                                                    $('#datepicker1').datepicker({
+                                                                        uiLibrary: 'bootstrap'
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                    
+                                                </div>
+                                            </div>
 
                                               <div class="collapse" id="collapseExample">
                                                   <div class="container">

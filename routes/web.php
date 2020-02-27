@@ -18,6 +18,12 @@ Route::get('/', function () {
 
 Route::group([
     'middleware' => 'roles',
+    'roles' => 'Klient'
+], function(){
+    
+});
+Route::group([
+    'middleware' => 'roles',
     'roles' => 'Admin'
 ], function (){
     Route::get('cars', [
@@ -34,10 +40,22 @@ Route::group([
         'uses' => 'CarsController@store',
         'as' => 'cars.store'
     ]);
+
     Route::delete('cars/{car}', [
         'uses' => 'CarsController@destroy',
         'as' => 'cars.delete'
     ]);
+
+    Route::get('cars/edit/{car}', [
+        'uses' => 'CarsController@edit',
+        'as' => 'cars.edit'
+    ]);
+
+    Route::put('cars/{car}', [
+        'uses' => 'CarsController@update',
+        'as' => 'cars.update'
+    ]);
+
 });
 
 Auth::routes();
